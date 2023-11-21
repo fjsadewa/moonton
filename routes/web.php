@@ -16,6 +16,15 @@ use Inertia\Inertia;
 |
 */
 
+// //hanya testing untuk memisahkan route untuk admin dan user menggunakan middleware 
+// Route::get('admin', function(){
+//     return 'Saya Admin';
+// })->middleware('role:admin');
+
+// Route::get('user', function(){
+//     return 'Saya User';
+// })->middleware('role:user');
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),
